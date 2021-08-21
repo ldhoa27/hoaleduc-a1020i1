@@ -1,0 +1,122 @@
+.main{
+    padding: 0 0 !important;
+    margin: 0 0 !important;
+}
+.cus-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cus-navbar-space-around {
+    width: 100%;
+    margin-left: 150px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    font-size: 30px;
+    margin: 10px;
+    font-weight: lighter;
+}
+
+.first-content {
+    position: relative;
+    text-align: left;
+    color: black;
+    padding: 0 0 !important;
+}
+
+.text-left-centered {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 30px;
+}
+
+.navbar-icon {
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 40px;
+}
+.float-left{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.lead{
+    max-width: 400px;
+    text-align: left;
+    margin-left: 5px;
+}
+.text-center h4{
+    text-align: center;
+}
+.text-center{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    margin-top: 50px;
+}
+.text-center h4{
+    margin-top: 10px;
+    color: blue; 
+    font-weight: bold
+}
+h4:hover{
+    text-decoration: underline;
+}
+.second-content{
+    padding: 0 0 !important;
+}
+.conten{
+    margin-left: 30px;
+    float: left;
+    margin-top: 600px;
+
+}
+.conten-third{
+    margin-top: 10px;
+}
+h4{
+    color: blue;
+    font-size: 20px;
+}
+.conten-third{
+    margin-left: 30px;
+}
+.four-content{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+.conten-infor{
+    margin-top: 7em;
+    margin-left: 4rem;
+    text-align: center;
+}
+.six-content{
+    display: block;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+.card-img-top{
+    width: 100%;
+    height: auto;
+    padding: 25px;
+}
+.video{
+    margin-left: 250px; 
+}
+.content-bar{
+    margin-left: 30px;
+}
