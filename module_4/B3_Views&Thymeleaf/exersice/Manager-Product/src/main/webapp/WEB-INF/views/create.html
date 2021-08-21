@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/layout::header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Create New Product </h1>
+<form th:object="${product} " th:action="@{/product/create}" method="post">
+    <table>
+        <tr>
+            <td><label >ID:</label></td>
+            <td><input th:field="${product.id}" placeholder="vd:12" ></td>
+        </tr>
+        <tr>
+            <td><label >NAME:</label></td>
+            <td><input th:field="${product.name}" placeholder="vd:Iphone 6"></td>
+        </tr>
+        <tr>
+            <td><label >MANUFACTURE:</label></td>
+            <td><input th:field="${product.manufacture}" placeholder="vd:Iphone"></td>
+        </tr>
+    </table>
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>

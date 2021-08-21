@@ -1,0 +1,35 @@
+<table class="table table-striped" id="searchTable">
+    <thead>
+    <tr>
+        <th scope="col">Index</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Status</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="product, state : ${products}">
+        <tr>
+            <td th:text="${state.index}+1"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.status}"></td>
+            <td th:text="${product.productType.name}"></td>
+            <td>
+                <button type="button" class="btn btn-danger" id="btnModalDelete"
+                        th:onclick="'javascript:showDelete(\''+ ${product.id} + '\');'">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/product/list'(page=${products.number -1})}" th:if="${products.hasPrevious()}">Previous</a>
+    <span th:text="${products.number + 1}"></span>/<span th:text="${products.totalPages}"></span>
+    <a th:href="@{'/product/list'(page=${products.number + 1})}" th:if="${products.hasNext()}">Next</a>
+</div>

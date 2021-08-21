@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Customer List</h1>
+<p>
+    <a th:href="@{customer-create}"> Add New Customer</a>
+</p>
+<form th:action="@{/search}" method="get">
+    <input type="text" name="key_search">
+    <input type="submit" value="Search">
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Ten</th>
+        <th>Email</th>
+        <th>Dia Chi</th>
+        <th>Xoa | Sua | view</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cus,star : ${customer}">
+        <td th:text="${star.count}"></td>
+        <td th:text="${cus.name}"></td>
+        <td th:text="${cus.email}"></td>
+        <td th:text="${cus.address}"></td>
+        <td>
+            <a th:href="@{/__${cus.getId()}__/customer-delete}">Xoa |</a>
+            <a th:href="@{/__${cus.getId()}__/customer-edit}"> Sua |</a>
+            <a th:href="@{/customer/{id}/view(id=${cus.getId()})}"> view</a>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+<div>
+    <a th:href="@{'/customer-list'(page=${customer.number - 1} ,key_search=${key_search})}" th:if="${customer.hasPrevious()}">Previous</a>
+    <span th:text="${customer.number + 1}"></span>/<span th:text="${customer.totalPages}"></span>
+    <a th:href="@{'/customer-list'(page=${customer.number + 1} ,key_search=${key_search})}" th:if="${customer.hasNext()}">Next</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/header::header}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <p>quản lí sản phẩm</p>
+    <button type="button" class="btn btn-primary" id="btnModalCreate" style="margin-right: 20px">Create</button>
+</div>
+<div style="display: inline">
+    <form th:action="@{/product/search}" method="get" class="form-group row">
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputSearch" name="search" placeholder="tìm kiếm theo tên sản phẩm">
+        </div>
+    </form>
+
+    <form th:action="@{/product/searchByPrice}" method="get" class="form-group row">
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputSearch2" name="search" placeholder="tìm kiếm theo giá">
+        </div>
+    </form>
+
+
+</div>
+
+<!--Show list-->
+<table class="table table-bordered table-striped table-hover" id="searchTable">
+    <thead class="thead-inverse">
+    <tr>
+        <th>STT</th>
+        <th>Chọn</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá bắt đầu</th>
+        <th>Loại sản phẩm</th>
+        <th>Tình trạng</th>
+        <th>Hành động</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product:${productList}">
+
+        <td scope="row" th:text="${product.productId}"></td>
+        <td th:text="${product.nameProduct}"></td>
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            </div>
+        </td>
+        <td th:text="${product.priceProduct}"></td>
+        <td th:text="${product.productType.nameProductType}"></td>
+        <td th:text="${product.statusProduct}"></td>
+        <td>
+            <button type="button" class="btn btn-success" id="btnModalEdit"
+                    th:onclick="'javascript:showEdit(\''+ ${product.productId}+ '\');'">
+                Edit
+            </button>
+            <button type="button" class="btn btn-danger" id="btnModalDelete"
+                    th:onclick="'javascript:showDelete(\''+ ${product.productId} + '\');'">
+                Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<nav aria-label="   Page navigation example" style="float: right; margin-right: 25px">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" th:href="@{/product(page = 0, search = ${stringAfterCheck})}">Prevous</a></li>
+        <th:block th:each="i: ${#numbers.sequence(0, productList.totalPages - 1)}">
+            <li class="page-item">
+                <a class="page-link" th:href="@{/product(page=${i},searchN=${stringAfterCheck})}" th:text="${i + 1}"></a>
+            </li>
+        </th:block>
+        <li class="page-item"><a class="page-link" th:href="@{/product(page = ${productList.totalPages - 1}, search = ${stringAfterCheck})}">Next</a></li>
+    </ul>
+</nav>
+
+<!-- Modal Create-->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Edit-->
+<div class="modal fade" id="modelId2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body2">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="modelId3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body3">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Script-->
+
+<script>
+    // $("#btnModalCreate").click(function () {
+    //
+    //     $.ajax({
+    //         type: "GET",
+    //         dataType:"HTML",
+    //         url : "/product/create",
+    //         success: function (data) {
+    //             $(".modal-body").html(data);
+    //             $("#modelId").modal('show');
+    //         }
+    //     })
+    // });
+    function showEdit(id) {
+        $.ajax({
+            type: "GET",
+            url: "/product/edit/"+id,
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body2").html(data);
+                $("#modelId2").modal('show');
+            }
+        })
+    }
+    function showDelete(id) {
+        $.ajax({
+            type: "GET",
+            url: "/product/delete/"+id,
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body3").html(data);
+                $("#modelId3").modal('show');
+            }
+        })
+    }
+    // Hàm search realtime
+    $(document).ready(function () {
+        $("#inputSearch").on("keyup", function () {
+
+            var search = document.getElementById("inputSearch").value;
+
+            $.ajax({
+                type: "GET",
+                url: "/product/search?search=" + search,
+                dataType: "HTML",
+                success: function (data) {
+                    $("#searchTable").html(data);
+                }
+            })
+        })
+    });
+    function actionDelete(id){
+        $.ajax({
+            type: "POST",
+            url: "/employee/delete/" + id,
+            dataType: "HTML",
+            success: function (data) {
+                var messageDelete = "Delete!!!";
+                $("#modelId3").modal('hide');
+                $("#searchTable").html(data);
+                $(".modal-body3").html(messageDelete);
+                $("#modelId3").modal('show');
+            }
+
+        })
+    }
+</script>
+
+</body>
+
+</html>

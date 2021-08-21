@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90f55a3a-e8a5-461f-890d-8da83d85c3c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B3_Views&amp;Thymeleaf/exersice/Manager-Product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B4_DataBinding&amp;Form/exercise/EmailForm&amp;BinDing/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B4_DataBinding&amp;Form/exercise/EmailForm&amp;BinDing/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/classes/java/main/vn/codegym/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/classes/java/main/vn/codegym/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/classes/java/main/vn/codegym/repository/StudentRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/classes/java/main/vn/codegym/repository/StudentRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/libs/Application_Customer-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/build/libs/Application_Customer-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/src/main/java/vn/codegym/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/src/main/java/vn/codegym/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/src/main/java/vn/codegym/repository/StudentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B5_CSDL&amp;ORM/parctice/Application_Customer/src/main/java/vn/codegym/repository/StudentRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B6_JPA/exercise/Blog/src/main/resources/templates/list.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1uWmJ3VPsjAVXCIpJQUjv3JtNyZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\resources\templates\blog" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.codegym.service" />
+      <recent name="vn.codegym.repository" />
+      <recent name="vn.codegym.controller" />
+      <recent name="vn.codegym.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\java\vn\codegym\model" />
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\resources\static" />
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\resources\static\css" />
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\resources\templates" />
+      <recent name="D:\hoaleduc_a1020i1\Module4\B7_SpringDataRepository\excersice\Blog\src\main\java\vn\codegym" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringDataRepositoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_data_repository.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.codegym.SpringDataRepositoryApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:8080/blog/" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90f55a3a-e8a5-461f-890d-8da83d85c3c9" name="Default Changelist" comment="" />
+      <created>1624789643609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624789643609</updated>
+      <workItem from="1624789648964" duration="973000" />
+      <workItem from="1624805625260" duration="4340000" />
+      <workItem from="1624872508261" duration="12110000" />
+      <workItem from="1624973998101" duration="1213000" />
+      <workItem from="1625020204880" duration="2969000" />
+      <workItem from="1625041608057" duration="9058000" />
+      <workItem from="1625132726173" duration="765000" />
+      <workItem from="1625144170492" duration="1196000" />
+      <workItem from="1625206743384" duration="728000" />
+      <workItem from="1625208178956" duration="200000" />
+      <workItem from="1625248382060" duration="592000" />
+      <workItem from="1625295238701" duration="1164000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624818238980">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1624818238980" />
+    <state x="949" y="395" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624889770360">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="949" y="395" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1624889770360" />
+    <state x="999" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1624888044804">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="999" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1624888044804" />
+    <state x="840" y="329" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625050537021">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="840" y="329" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1625050537021" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1625206764649">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1625206764649" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.1.bottom" timestamp="1625073645552">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1625073645552" />
+    <state width="1557" height="222" key="GridCell.Tab.1.center" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.1.left" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state width="1557" height="222" key="GridCell.Tab.1.right" timestamp="1625073645551">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1625073645551" />
+    <state x="182" y="91" key="new project wizard" timestamp="1625048626951">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="182" y="91" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1625048626951" />
+  </component>
+</project>

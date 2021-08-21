@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#searchForm').submit(function (event) {
+            let search = $('#search').val();
+            console.log(search);
+            $.ajax({
+                type : "POST",
+                url : "search",
+                data : {search},
+                dataType : HTML,
+                success : function (responseText) {
+                    $('#result').html(responseText);
+                }
+            })
+            event.preventDefault();
+        })
+    })
+</script>
+<div class="container">
+    <!--    Menu-->
+    <div th:replace="layout::menu">
+    </div>
+    <!--    Categories-->
+
+
+    <!--    Content-->
+    <div>
+        <form id="searchForm" class="form-inline my-2 my-lg-0" action="/search" method="post">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <div id="result">
+
+    </div>
+</div>
+</body>
+</html>

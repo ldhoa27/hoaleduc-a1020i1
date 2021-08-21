@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout::header">
+
+</head>
+<body>
+<h1> Edit Product </h1>
+<form th:object="${student}" th:action="@{/student/update}">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>
+                <input type="number" th:field="*{id}">
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" th:field="*{gender}" value="0" />Female
+                <input type="radio" th:field="*{gender}" value="1" />Male
+                <input type="radio" th:field="*{gender}" value="2" />LGBT
+            </td>
+        </tr>
+        <tr>
+            <td>Languages:</td>
+            <td>
+                <input type="checkbox" th:each="lang:${languageList}"
+                       th:text="${lang}" th:value="${lang}" th:field="*{language}">
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

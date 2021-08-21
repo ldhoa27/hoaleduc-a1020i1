@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/layout::header">
+</head>
+<body>
+<h1>Product Manager</h1>
+<a th:href="@{/product/create}">Create new Product</a>
+<div th:if="${success}">
+    <p th:text="${success}" style="color: red"></p>
+</div>
+<table class="table" id="products">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>MANUFACTURE</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <tr th:scope="row" th:each="row,rowstart:${products}">
+        <td th:scope="col" th:text="${row.id}"></td>
+        <td th:scope="col" th:text="${row.name}"></td>
+        <td th:scope="col" th:text="${row.manufacture}"></td>
+        <td><a th:href="@{/product/{id}/edit(id=${row.getId()})}">Edit</a></td>
+        <td><a th:href="@{/product/{id}/delete(id=${row.getId()})}">Delete</a></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+<footer th:replace="/layout::foter">
+
+</footer>
+</html>

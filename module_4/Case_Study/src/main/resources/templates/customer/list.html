@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="website-body">
+        <!--        main-->
+        <div th:replace="~{/layout::customer-left-panel}">
+            <!--            left panel-->
+        </div>
+        <div id="test">
+            <div class="main-content" style="text-align: center">
+                <!--            content-->
+                <table class="table table-striped" id="searchTable">
+                    <thead class="text-center font-weight-bold">
+                    <td>Mã khách hàng</td>
+                    <td>khách loại</td>
+                    <td>Họ tên</td>
+                    <td>Số điện thoại</td>
+                    <td>Email</td>
+                    <td>Chỉnh sửa</td>
+                    <td>Xóa</td>
+                    </thead>
+                    <tbody>
+                    <tr th:each="customer : ${customers}">
+                        <td th:text="${customer.id}"></td>
+                        <td th:text="${customer.customerType.name}"></td>
+                        <td th:text="${customer.name}"></td>
+                        <td th:text="${customer.phone}"></td>
+                        <td th:text="${customer.email}"></td>
+                        <td class="text-center"><a class="btn btn-success btn-sm" th:href="@{/customer/edit/{id}(id=${customer.id})}">Sửa</a></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" id="btnModalDelete"
+                                    th:onclick="showDelete([[${customer.id}]])">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pg-blue justify-content-end">
+                        <a class="btn btn-secondary btn-sm" th:href="@{/customer(search=${search},page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+                        <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+                        <a class="btn btn-secondary btn-sm" th:href="@{/customer(search=${search},page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Customer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function showDelete(id) {
+                    console.log("show delete")
+                    $.ajax({
+                        method: "GET",
+                        url: "/customer/delete/" + id,
+                        dataType: "HTML",
+                        success: function (data) {
+                            $(".modal-body").html(data);
+                            $("#modelId").modal('show');
+                        }
+                    })
+                };
+
+                function actionDelete(id){
+                    $.ajax({
+                        method: "POST",
+                        url: "/customer/delete-customer/" + id,
+                        dataType: "HTML",
+                        success: function (data) {
+                            $("#modelId").modal('hide');
+                            $("#test").html(data);
+
+                        }
+
+                    })
+                }
+            </script>
+    </div>
+    <div th:replace="~{/layout::footer}">
+        <!--        footer-->
+    </div>
+</div>
+</body>
+</html>

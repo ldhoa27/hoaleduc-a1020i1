@@ -1,0 +1,46 @@
+
+        <table class="table table-striped">
+            <thead>
+            <tr class="text-center font-weight-bold">
+                <td>ID</td>
+                <td>Họ tên</td>
+                <td>Ngày sinh</td>
+                <td>Email</td>
+                <td>Chức vụ</td>
+                <td>Bộ phận</td>
+                <td>Trình độ</td>
+                <td>Chi Tiết</td>
+                <td>Chỉnh sửa</td>
+                <td>Xóa</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${#temporals.format(employee.birthday, 'dd/MM/yyyy')}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.position.name}"></td>
+                <td th:text="${employee.department.name}"></td>
+                <td th:text="${employee.educationDegree.name}"></td>
+                <td>
+                    <button class="btn btn-danger btnModalView">Xem</button>
+                    <input type="hidden" th:value="${employee.id}">
+                </td>
+                <td class="text-center"><a class="btn btn-success btn-sm" th:href="@{/employee/edit/{id}(id=${employee.id})}">Sửa</a></td>
+                <td>
+                    <button type="button" class="btn btn-danger" id="btnModalDelete"
+                            th:onclick="showDelete([[${employee.id}]])">
+                        Xóa
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pg-blue justify-content-end">
+                <a class="btn btn-secondary btn-sm" th:href="@{/employee(search=${search},page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
+                <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
+                <a class="btn btn-secondary btn-sm" th:href="@{/employee(search=${search},page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+            </ul>
+        </nav>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div th:fragment="navbar">
+            <div class="container-fluid bg-warning d-flex justify-content-center"
+                 style="position: fixed; top: 0px;z-index: 200;">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="row px-3 collapse navbar-collapse" style="height:45px;width: 1000px; max-width: 1000px;"
+                         id="navbarSupportedContent">
+                        <div class="col-3 d-flex align-items-center">
+                            <a th:href="@{/}">
+                                <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052018/untitled-1_425.png?wmxzS5uhgYDb8ix_hMP8E0kY63roZN7w&itok=1jEdoMK2"
+                                     style="height: 40px;" alt="">
+                            </a>
+                        </div>
+                        <div class="col-9 d-flex justify-content-end">
+                            <div class="h-100 d-flex align-items-center mr-3">
+                                <!--                        <i class="fas fa-search mr-1" style="font-size: 20px;"></i>-->
+                                <span style="font-size: 16px;">
+                                    <a th:href="@{/customer}" style="color: black; text-decoration: none">Customer</a>
+                                </span>
+                            </div>
+                            <div class="h-100 d-flex align-items-center mr-3">
+                                <!--                        <i class="far fa-bell mr-1" style="font-size: 20px;"></i>-->
+                                <span style="font-size: 16px;"><a th:href="@{/employee}" >Employee</a>
+                                </span>
+                            </div>
+                            <div class="h-100 d-flex align-items-center mr-3">
+                                <!--                        <i class="far fa-comments mr-1" style="font-size: 20px;"></i>-->
+                                <span style="font-size: 16px;"><a th:href="@{/service}">Service</a></span>
+                            </div>
+                            <div class="h-100 d-flex align-items-center mr-3">
+                                <a style="color: black; text-decoration: none" th:href="@{/contract}">
+                                    <!--                            <i class="fas fa-user-circle mr-1" style="font-size: 20px;"></i>-->
+                                    <span style="font-size: 16px;">Contract
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </body>
+</html>

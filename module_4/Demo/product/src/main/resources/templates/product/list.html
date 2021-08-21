@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>List Product</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="test">
+        <!--        main-->
+        <div class="main-content">
+            <a href="/product/create">Create Product</a>
+            <br/>
+            <table class="table table-striped" id="searchTable">
+                <thead>
+                <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Product Type</th>
+                    <th scope="col">Chỉnh sửa</th>
+                    <th scope="col">Xóa</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <th:block th:each="product, state : ${products}">
+                    <tr>
+                        <td th:text="${state.index}+1"></td>
+                        <td th:text="${product.name}"></td>
+                        <td th:text="${product.price}"></td>
+                        <td th:text="${product.status}"></td>
+                        <td th:text="${product.productType.name}"></td>
+                        <td class="text-center"><a class="btn btn-success btn-sm" th:href="@{/product/edit/{id}(id=${product.id})}">Sửa</a></td>
+
+                        <td>
+                            <button type="button" class="btn btn-danger" id="btnModalDelete"
+                                    th:onclick="'javascript:showDelete(\''+ ${product.id} + '\');'">
+                                Xóa
+                            </button>
+                        </td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+            <div>
+                <a th:href="@{'/product/list'(page=${products.number -1})}" th:if="${products.hasPrevious()}">Previous</a>
+                <span th:text="${products.number + 1}"></span>/<span th:text="${products.totalPages}"></span>
+                <a th:href="@{'/product/list'(page=${products.number + 1})}" th:if="${products.hasNext()}">Next</a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script-->
+        <script>
+
+
+            function showDelete(id) {
+                $.ajax({
+                    method: "GET",
+                    url: "/delete/" + id,
+                    dataType: "HTML",
+                    success: function (data) {
+                        $(".modal-body").html(data);
+                        $("#modelId").modal('show');
+                    }
+                })
+            };
+
+            function actionDelete(id){
+                $.ajax({
+                    method: "POST",
+                    url: "/delete/" + id,
+                    dataType: "HTML",
+                    success: function (data) {
+                        var messageDelete = "Delete!!!";
+                        $("#modelId").modal('hide');
+                        $("#test").html(data);
+                        $(".modal-body").html(messageDelete);
+                        $("#modelId").modal('show');
+                    }
+
+
+                })
+            }
+
+        </script>
+    </div>
+    <div th:replace="~{/layout::footer}">
+        <!--        footer-->
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="hidden" th:field="${product.id}">
+<div>
+    Product: <p th:text="${product.name}"></p>
+    Are you sure to delete?
+</div>
+<button id="clickDelete" type="button" class="btn btn-danger"
+        th:onclick="'javascript:actionDelete(\''+ ${product.id} + '\');'">Delete
+</button>
+</body>
+</html>

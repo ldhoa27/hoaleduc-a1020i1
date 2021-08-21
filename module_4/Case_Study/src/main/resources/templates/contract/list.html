@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="website-body">
+        <!--        main-->
+        <div th:replace="~{/layout::contract-left-panel}">
+            <!--            left panel-->
+        </div>
+        <div class="main-content" style="text-align: center">
+            <!--            content-->
+            <table class="table table-striped mr-auto ml-auto">
+                <thead>
+                <tr class="text-center font-weight-bold">
+                    <td>Mã HĐ</td>
+                    <td>Tên khách hàng</td>
+                    <td>Tên dịch vụ</td>
+                    <td>Ngày bắt đầu</td>
+                    <td>Ngày kết thúc</td>
+                    <td>Tên nhân viên</td>
+                    <td>Chỉnh sửa</td>
+                    <td>Xóa</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="contract : ${contracts}">
+                        <td class="text-center" th:text="${contract.id}"></td>
+                        <td th:text="${contract.customer.name}"></td>
+                        <td th:text="${contract.resortService.name}"></td>
+                        <td th:text="${#temporals.format(contract.startDate, 'dd/MM/yyyy')}"></td>
+                        <td th:text="${#temporals.format(contract.endDate, 'dd/MM/yyyy')}"></td>
+                        <td th:text="${contract.employee.name}">
+                        </td>
+                        <td class="text-center"><a class="btn btn-success btn-sm" th:href="@{/contract/edit/{id}(id=${contract.id})}">Sửa</a></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" id="btnModalDelete"
+                                    th:onclick="showDelete([[${contract.id}]])">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+            <div class="mr-auto ml-auto">
+                <ul class="pagination pg-blue justify-content-end">
+                    <a class="btn btn-secondary btn-sm" th:href="@{/contract(search=${search},page=${contracts.number - 1})}" th:if="${contracts.hasPrevious()}">Previous</a>
+                    <span th:text="${contracts.number + 1}"></span>/<span th:text="${contracts.totalPages}"></span>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/contract(search=${search},page=${contracts.number + 1})}" th:if="${contracts.hasNext()}">Next</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div th:replace="~{/layout::footer}">
+        <!--        footer-->
+    </div>
+</div>
+</body>
+</html>

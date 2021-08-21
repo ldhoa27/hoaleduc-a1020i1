@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="website-body">
+        <!--        main-->
+        <div class="main-content">
+            <!--            content-->
+            <h3 CLASS="text-center font-weight-bold text-success ml-auto mr-auto mb-3 mt-3">CHỈNH SỬA THÔNG TIN SẢN PHẨM</h3>
+            <form class="col-9 mr-auto ml-auto" th:action="@{/product/update}" method="post" th:object="${product}">
+                <input class="form-control" type="text" th:field="*{id}" hidden>
+<!--                tên sp-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Tên Sản Phẩm:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{name}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('name')}"
+                               th:errors="*{name}"></label>
+                    </label>
+
+                </div>
+<!--                giá-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Giá:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{price}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('price')}"
+                               th:errors="*{price}"></label>
+                    </label>
+
+                </div>
+
+<!--                trạng thái-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Trạng thái:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{status}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('status')}"
+                               th:errors="*{status}"></label>
+                    </label>
+
+                </div>
+
+<!--                loại sp-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Loại Sản phẩm:<span style="color: red">*</span></label>
+                    <label class="col-7">
+                        <select class="form-control" th:field="*{productType}">
+                            <option th:each="proType : ${productTypes}" th:value="${proType.id}"
+                                    th:utext="${proType.name}"></option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group text-center">
+                    <label><input class="btn btn-primary" type="submit" value="Update"></label>
+                </div>
+            </form>
+
+    <div th:replace="~{/layout::footer}">
+        <!--        footer-->
+    </div>
+</div>
+</body>
+</html>

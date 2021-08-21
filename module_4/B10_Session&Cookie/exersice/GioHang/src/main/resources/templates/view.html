@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .sticky-recommend{
+            top: 56px;
+            position: sticky;
+        }
+        .navbar-nav a{
+            text-decoration: none;
+            color: gold;
+        }
+        .navbar-nav a:hover{
+            text-decoration: none;
+            color: goldenrod;
+        }
+        .maSP{
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+        }
+        .gia{
+            color: #c00;
+            font-size: 22px;
+            text-align: center;
+        }
+        .button-a{
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .tenSP{
+            color: #838383;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: 1px solid #ccc;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .giao-hang{
+            background-color: #fffcd9;
+            border: 1px solid #d8d297;
+            border-radius: 10px;
+            color: #f26922;
+            font-size: 15px;
+        }
+        .luu-y{
+            background-color: #e7ffe2;
+            border: 1px solid #b1dab3;
+            border-radius: 10px;
+            color: #189001;
+            font-size: 15px;
+        }
+        .qua-tang{
+            background-color: #fffcd9;
+            border: 1px solid #d8d297;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            color: #f26922;
+            font-size: 15px;
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="~{layout :: navbar}"></div>
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-5">
+                    <div class="card border-0" style="width: 100%;">
+                        <div class="p-3 border">
+                            <img th:src="${product.hinhAnh}" class="card-img-top" alt="..." >
+                        </div>
+                        <div class="card-body border-right border-left border-bottom" style="background-color: #f7f7f7">
+                            <div class="text-center mb-3">
+                                <span class="maSP">Mã SP: </span>
+                                <span style="font-weight: 600;color: #39ab49;font-size: 18px;" th:text="${product.maSp}"></span>
+                            </div>
+                            <div class="progress" style="height: 1px; background-color: #cbcbcb">
+                            </div>
+                            <h6 class="text-center mt-3">Giá mới: <span class="gia" th:text="${product.gia + ' đ'}"></span></h6>
+                            <p class="text-center" style="font-size: 11px;">(Giá đã bao gồm 10% VAT)</p>
+                            <a class="btn btn-warning mt-2 button-a" th:href="@{/addcart/__${product.id}__}">Mua ngay</a>
+                            <a class="btn btn-success mt-3 button-a" th:href="@{#}">Gọi ngay: 1800 6353</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <p class="tenSP" th:text="${product.tenSP}"></p>
+                    <p style="font-size: 14px;color: #555;" th:text="${product.moTa}">
+                    </p>
+                    <div class="giao-hang pt-3 pb-3 pl-3" style="background-color: #fffcd9; border-color: #d8d297">
+                        <span style="color: #f26922;"><strong>Hoa giao nhanh 60 phút Hồ Chí Minh</strong></span>
+                    </div>
+                    <div class="luu-y p-3 mt-3">
+                        <h4 style="color: #189001;font-size: 14px;">Lưu ý: Sản phẩm chỉ có ở Hồ Chí Minh và Hà Nội</h4>
+                        <p class="mb-2">Sản phẩm bạn đang chọn là sản phẩm được thiết kế đặc biệt!</p>
+                        <p class="mb-0">Hiện nay, Hoayeuthuong.com chỉ thử nghiệm cung cấp cho thị trường <strong> Tp. Hồ Chí Minh và Hà Nội</strong></p>
+                    </div>
+                    <div class="qua-tang p-3 mt-3">
+                        <ul class="p-0">
+                            <li>
+                                <span class="badge badge-danger">1</span>
+                                Tặng banner, thiệp (trị giá 20.000đ) miễn phí
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">2</span>
+                                Giảm ngay 20.000đ khi Bạn tạo đơn hàng online
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">3</span>
+                                Giảm tiếp 3% cho đơn hàng Bạn tạo ONLINE lần thứ 2, 5% cho đơn hàng Bạn tạo ONLINE lần thứ 6 và 10% cho đơn hàng Bạn tạo ONLINE lần thứ 12 (Chỉ áp dụng tại Tp. HCM)
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">4</span>
+                                Giao miễn phí trong nội thành 63/63 tỉnh
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">5</span>
+                                Giao gấp trong vòng 2 giờ
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">6</span>
+                                Cam kết 100% hoàn lại tiền nếu Bạn không hài lòng
+                            </li>
+                            <li>
+                                <span class="badge badge-danger">7</span>
+                                Cam kết hoa tươi trên 3 ngày
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div th:replace="~{layout :: recommend}"></div>
+            <div class="row" style="height: 500px">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

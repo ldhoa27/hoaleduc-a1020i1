@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="website-body">
+        <!--        main-->
+        <div th:replace="~{/layout::employee-left-panel}">
+            <!--            left panel-->
+        </div>
+        <div id="testabc">
+            <div class="main-content" style="text-align: center">
+                <!--            content-->
+                <table class="table table-striped" id="searchTable1">
+                    <thead>
+                    <tr class="text-center font-weight-bold">
+                        <td>ID</td>
+                        <td>Họ tên</td>
+                        <td>Ngày sinh</td>
+                        <td>Email</td>
+                        <td>Chức vụ</td>
+                        <td>Bộ phận</td>
+                        <td>Trình độ</td>
+                        <td>Chi Tiết</td>
+                        <td>Chỉnh sửa</td>
+                        <td>Xóa</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="employee : ${employees}">
+                        <td th:text="${employee.id}"></td>
+                        <td th:text="${employee.name}"></td>
+                        <td th:text="${#temporals.format(employee.birthday, 'dd/MM/yyyy')}"></td>
+                        <td th:text="${employee.email}"></td>
+                        <td th:text="${employee.position.name}"></td>
+                        <td th:text="${employee.department.name}"></td>
+                        <td th:text="${employee.educationDegree.name}"></td>
+                        <td>
+                            <button class="btn btn-danger btnModalView">Xem</button>
+                            <input type="hidden" th:value="${employee.id}">
+                        </td>
+                        <td class="text-center"><a class="btn btn-success btn-sm" th:href="@{/employee/edit/{id}(id=${employee.id})}">Sửa</a></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" id="btnModalDelete"
+                                    th:onclick="showDelete([[${employee.id}]])">
+                                Xóa
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pg-blue justify-content-end">
+                        <a class="btn btn-secondary btn-sm" th:href="@{/employee(search=${search},page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
+                        <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
+                        <a class="btn btn-secondary btn-sm" th:href="@{/employee(search=${search},page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Employee</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $(".btnModalView").click(function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "/employee/view/" + $(this).next().val(),
+                        dataType: "HTML",
+                        success: function (data) {
+                            $(".modal-body").html(data);
+                            $("#modelId").modal('show')
+                        }
+                    })
+                })
+
+            })
+
+
+
+            function showDelete(id) {
+                console.log("show delete")
+                $.ajax({
+                    method: "GET",
+                    url: "/employee/delete/" + id,
+                    dataType: "HTML",
+                    success: function (data) {
+                        $(".modal-body").html(data);
+                        $("#modelId").modal('show');
+                    }
+                })
+            }
+
+            function actionDelete(id){
+
+                $.ajax({
+                    method: "POST",
+                    url: "/employee/delete-employee/" + id,
+                    dataType: "HTML",
+                    success: function (data) {
+                        $("#modelId").modal('hide');
+                        $("#testabc").html(data);
+                    }
+
+                })
+            }
+        </script>
+    </div>
+    <div th:replace="~{/layout::footer}">
+        <!--        footer-->
+    </div>
+</div>
+</body>
+</html>

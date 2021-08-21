@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="~{/layout::header}">
+        <!--        header-->
+    </div>
+    <div th:insert="~{/layout::navbar}">
+        <!--        navbar-->
+    </div>
+    <div class="website-body">
+        <!--        main-->
+        <div class="main-content">
+            <!--            content-->
+            <h3 CLASS="text-center font-weight-bold text-success ml-auto mr-auto mb-3 mt-3">CHỈNH SỬA THÔNG TIN KHUYẾN MÃI</h3>
+            <form class="col-9 mr-auto ml-auto" th:action="@{/update}" method="post" th:object="${promotion}">
+                <input class="form-control" type="text" th:field="*{id}" hidden>
+                <!--                tên sp-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Tiêu Đề:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{title}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('title')}"
+                               th:errors="*{title}"></label>
+                    </label>
+
+                </div>
+                <!--                giá-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Thời Gian Bắt Đàu:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{startDate}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('startDate')}"
+                               th:errors="*{startDate}"></label>
+                    </label>
+
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Thời Gian Kết Thúc:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{endDate}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('endDate')}"
+                               th:errors="*{endDate}"></label>
+                    </label>
+
+                </div>
+                <!--                trạng thái-->
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Giảm Giá:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{discount}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('discount')}"
+                               th:errors="*{discount}"></label>
+                    </label>
+
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Chi Tiết:<span style="color: red">*</span></label>
+                    <label class="col-7 column">
+                        <input class="form-control" type="text" th:field="*{detail}">
+                        <label class="text-danger" th:if="${#fields.hasErrors('detail')}"
+                               th:errors="*{detail}"></label>
+                    </label>
+
+                </div>
+                <div class="form-group text-center">
+                    <label><input class="btn btn-primary" type="submit" value="Update"></label>
+                </div>
+            </form>
+
+            <div th:replace="~{/layout::footer}">
+                <!--        footer-->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
