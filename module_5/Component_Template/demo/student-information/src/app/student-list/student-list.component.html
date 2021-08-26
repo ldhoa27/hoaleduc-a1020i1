@@ -1,0 +1,32 @@
+<h3>Student List</h3>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Mark</th>
+    <th>Result</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.address}}</td>
+      <td>{{student.mark}}</td>
+      <td *ngIf="student.mark >= 5" [ngStyle]="{'color': 'blue', 'font-size': '20px', 'font-weight': 'bold'}">Pass</td>
+      <td *ngIf="student.mark < 5" [ngStyle]="{'color': 'red', 'font-size': '20px', 'font-weight': 'bold'}">Fail</td>
+      <td>
+        <button class="btn btn-warning">Detail</button>
+        <label>&nbsp;</label>
+        <button class="btn btn-warning">Delete</button>
+      </td>
+    </tr>
+
+  </tbody>
+
+</table>
