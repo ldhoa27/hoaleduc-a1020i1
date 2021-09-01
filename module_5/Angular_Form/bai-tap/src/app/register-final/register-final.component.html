@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="d-flex">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+         alt="angular" style="height: 200px; width: 200px" class="mr-auto ml-auto">
+  </div>
+  <div class="d-flex">
+    <div class="mr-auto ml-auto w-50">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="emailInput">Email <span style="color: red">*</span></label>
+          <input type="email" class="form-control" id="emailInput" formControlName="email">
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.email?.invalid && (registerForm.controls.email?.touched || isSubmit)">
+          <p *ngIf="registerForm.controls.email?.errors?.required" class="m-0">Email is required!!!</p>
+          <p *ngIf="registerForm.controls.email?.errors?.email" class="m-0">Wrong format!!!</p>
+        </div>
+        <fieldset formGroupName="pwGroup">
+          <div class="form-group">
+            <label for="passInput">Password<span style="color: red">*</span></label>
+            <input type="password" class="form-control" id="passInput" formControlName="password">
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="password?.invalid && (password?.touched || isSubmit)">
+            <p *ngIf="password?.errors?.required" class="m-0">Password is required!!!</p>
+            <p *ngIf="password?.errors?.minlength" class="m-0">The input must be of minimum length 6 characters</p>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassInput">Confirm Password<span style="color: red">*</span></label>
+            <input type="password" class="form-control" id="confirmPassInput" formControlName="confirmPassword">
+          </div>
+          <!--          <div class="alert alert-danger" role="alert"-->
+          <!--               *ngIf="registerForm.hasError('passwordnotmatch', ['pwGroup'])">-->
+          <!--            Password does not match!-->
+          <!--          </div>-->
+          <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.pwGroup?.invalid && confirmPassword?.touched">
+            <!--            <p *ngIf="registerForm.hasError('valiPassword', ['pwGroup'])" class="m-0">Passwords must match</p>-->
+            <p *ngIf="registerForm.controls.pwGroup?.errors?.valiPassword && password?.valid" class="m-0">Passwords must match</p>
+            <p *ngIf="confirmPassword?.errors?.required" class="m-0">Password is required!!!</p>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="countryInput">Country<span style="color: red">*</span></label>
+          <select name="" id="countryInput" class="form-control" formControlName="countryName">
+            <option value="">Choose your country</option>
+            <option *ngFor="let co of country" value="{{co.value}}">{{co.name}}</option>
+          </select>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.countryName?.invalid && (registerForm.controls.countryName?.touched || isSubmit)">
+          <p *ngIf="registerForm.controls.countryName?.errors?.required" class="m-0">Please enter your country name</p>
+        </div>
+        <div class="form-group">
+          <label for="ageInput">Age<span style="color: red">*</span></label>
+          <input type="number" class="form-control" id="ageInput" formControlName="age">
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.age?.invalid && (registerForm.controls.age?.touched || isSubmit)">
+          <p *ngIf="registerForm.controls.age?.errors?.required" class="m-0">Age is required!!!</p>
+          <p *ngIf="registerForm.controls.age?.errors?.min" class="m-0">The number should be greater than 18</p>
+        </div>
+        <div class="form-group">
+          <label>Gender<span style="color: red">*</span></label><br>
+          <input type="radio" name="gender" value="Male" id="male" formControlName="gender">
+          <label for="male">Male</label>
+          <span> &nbsp;</span>
+          <input type="radio" name="gender" value="Female" id="female" formControlName="gender">
+          <label for="female">Female</label>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.gender?.invalid && (registerForm.controls.gender?.touched || isSubmit)">
+          <p *ngIf="registerForm.controls.gender?.errors?.required" class="m-0">Gender is required!!!</p>
+        </div>
+        <div class="form-group">
+          <label for="phoneInput">Phone<span style="color: red">*</span></label>
+          <input type="tel" class="form-control" id="phoneInput" placeholder="+84123456789" formControlName="phone">
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.phone?.invalid && (registerForm.controls.phone?.touched || isSubmit)">
+          <p *ngIf="registerForm.controls.phone?.errors?.required" class="m-0">Phone is required!!!</p>
+          <p *ngIf="registerForm.controls.phone?.errors?.valiPhone" class="m-0">Wrong format!!!</p>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<pre>
+{{ registerForm.value | json}}
+</pre>
+
