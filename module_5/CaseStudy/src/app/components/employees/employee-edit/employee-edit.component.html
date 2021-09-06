@@ -1,0 +1,75 @@
+<h3 class="text-center mt-3">Chỉnh sửa Nhân Viên</h3>
+<form class="w-75 mx-auto" [formGroup]="formEditEmployee">
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <label for="id">ID</label>
+      <input type="text" class="form-control" id="id" formControlName="id">
+      <p *ngIf="formEditEmployee.controls.id.errors?.required && formEditEmployee.controls.id.touched " class="text-danger">Vui lòng nhập ID</p>
+      <p *ngIf="formEditEmployee.controls.id.errors?.pattern && formEditEmployee.controls.id.touched " class="text-danger">ID không đúng định dạng</p>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="name">Họ Tên</label>
+      <input type="text" class="form-control" id="name" formControlName="fullname">
+      <p *ngIf="formEditEmployee.controls.fullname.errors?.required && formEditEmployee.controls.fullname.touched " class="text-danger">Vui lòng nhập họ tên</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="position">Vị Trí</label>
+      <input type="text" class="form-control" id="position" formControlName="position">
+      <p *ngIf="formEditEmployee.controls.position.errors?.required && formEditEmployee.controls.position.touched " class="text-danger">Vui lòng nhập vị trí</p>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="academiLevel">Trình Độ</label>
+      <input type="text" class="form-control" id="academiLevel" formControlName="academiLevel">
+      <p *ngIf="formEditEmployee.controls.academiLevel.errors?.required && formEditEmployee.controls.academiLevel.touched " class="text-danger">Vui lòng nhập trình độ</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="part">Bộ Phận</label>
+      <input type="text" class="form-control" id="part" formControlName="part">
+      <p *ngIf="formEditEmployee.controls.part.errors?.required && formEditEmployee.controls.part.touched " class="text-danger">Vui lòng nhập bộ phận</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="dateOfBirth">Ngày Sinh</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+      <p *ngIf="formEditEmployee.controls.dateOfBirth.errors?.required && formEditEmployee.controls.dateOfBirth.touched " class="text-danger">Vui lòng nhập ngày sinh</p>
+
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="identityNumber">CMND</label>
+      <input type="text" class="form-control" id="identityNumber" formControlName="identityNumber">
+      <p *ngIf="formEditEmployee.controls.identityNumber.errors?.required && formEditEmployee.controls.identityNumber.touched " class="text-danger">Vui lòng nhập cmnd</p>
+      <p *ngIf="formEditEmployee.controls.identityNumber.errors?.pattern && formEditEmployee.controls.identityNumber.touched " class="text-danger">Cmnd không đúng định dạng</p>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="salary">Mức Lương</label>
+      <input type="text" class="form-control" id="salary" formControlName="salary">
+      <p *ngIf="formEditEmployee.controls.salary.errors?.required && formEditEmployee.controls.salary.touched " class="text-danger">Vui lòng nhập mức lương</p>
+      <p *ngIf="formEditEmployee.controls.salary.errors?.pattern && formEditEmployee.controls.salary.touched " class="text-danger">Mức lương không đúng định dạng</p>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" formControlName="email">
+      <p *ngIf="formEditEmployee.controls.email.errors?.required && formEditEmployee.controls.email.touched " class="text-danger">Vui lòng nhập email</p>
+      <p *ngIf="formEditEmployee.controls.email.errors?.email && formEditEmployee.controls.email.touched " class="text-danger">Vui lòng nhập đúng định dạng</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="phoneNumber">Số Điện Thoại</label>
+      <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+      <p *ngIf="formEditEmployee.controls.phoneNumber.errors?.required && formEditEmployee.controls.phoneNumber.touched " class="text-danger">Vui lòng nhập sdt</p>
+      <p *ngIf="formEditEmployee.controls.phoneNumber.errors?.pattern && formEditEmployee.controls.phoneNumber.touched " class="text-danger">Sdt không đúng định dạng</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="address">Địa Chỉ</label>
+      <input type="text" class="form-control" id="address" formControlName="address">
+      <p *ngIf="formEditEmployee.controls.address.errors?.required && formEditEmployee.controls.address.touched " class="text-danger">Vui lòng nhập địa chỉ</p>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mt-3">
+    <button [disabled]="formEditEmployee.invalid" class="btn btn-success" (click)="editEmployee()">Sửa Thông tin</button>
+  </div>
+</form>

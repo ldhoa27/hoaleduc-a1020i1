@@ -1,0 +1,52 @@
+<div class="row justify-content-between">
+  <h2>Danh sách Nhân Viên</h2>
+  <div class="d-flex">
+    <input class="form-control mr-3" type="text" style="width: 200px;" placeholder="tìm kiếm tên nhân viên" [(ngModel)]="term">
+    <button class="btn btn-outline-success">Search</button>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <button class="btn btn-success" [routerLink]="['/employee-add']" >Thêm mới</button>
+    <table class="table mt-3 table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Họ tên</th>
+          <th>Vị trí</th>
+          <th>Trình độ</th>
+          <th>Bộ phận</th>
+          <th>Ngày sinh</th>
+          <th>CMND</th>
+          <th>Lương</th>
+          <th>Email</th>
+          <th>SDT</th>
+          <th>Địa chỉ</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees |filter:term | paginate: { itemsPerPage: 2, currentPage: p }">
+          <td>{{employee.id}}</td>
+          <td>{{employee.fullname}}</td>
+          <td>{{employee.position}}</td>
+          <td>{{employee.academiLevel}}</td>
+          <td>{{employee.part}}</td>
+          <td>{{employee.dateOfBirth}}</td>
+          <td>{{employee.identityNumber}}</td>
+          <td>{{employee.salary}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.phoneNumber}}</td>
+          <td>{{employee.address}}</td>
+          <td>
+            <button class="btn btn-sm btn-warning" [routerLink]="['/employee-edit/' + employee.id]">Sửa</button>
+            <label>&nbsp;</label>
+            <button class="btn btn-sm btn-danger">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>
