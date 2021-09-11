@@ -11,20 +11,17 @@ import {PostService} from "../post.service";
 export class BlogDetailComponent implements OnInit {
 
   post!: IPost;
-  constructor(
-    private route: ActivatedRoute,
-    private postService: PostService
-  ) {}
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute,
+              private postService: PostService) { }
+
+  ngOnInit(){
     // @ts-ignore
     const id = +this.route.snapshot.paramMap.get('id');
-    this.postService.getPostById(id).subscribe(
+    this.postService.getByPostId(id).subscribe(
       next => (this.post = next),
       error => {
         console.log(error);
-        // @ts-ignore
-        this.post = null;
       }
     );
   }

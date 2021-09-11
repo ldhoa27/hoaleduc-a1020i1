@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogEditComponent } from './blog-edit/blog-edit.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -20,7 +20,8 @@ import {HttpClientModule} from "@angular/common/http";
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

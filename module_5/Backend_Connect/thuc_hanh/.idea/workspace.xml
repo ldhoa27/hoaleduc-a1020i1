@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2262fea5-5f05-4d9f-9ed4-2f0e84ca6e24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_tap/todo/src/app/todo/todo.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/components/customer/model/ICustomer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/components/customer/model/ICustomerType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Angular_Form/bai-tap/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Angular_Form/bai-tap/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/StudentDao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/StudentDao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Angular_Overview/demo/student-information/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog-detail/blog-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog-detail/blog-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog-detail/blog-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog-detail/blog-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog-edit/blog-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog-edit/blog-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog-edit/blog-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog-edit/blog-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog/blog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog/blog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/blog/blog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/blog/blog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-blog/src/app/post.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app-blog/src/app/post.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/Json-Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/Json-Server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/ICustomer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-edit/employee-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-edit/employee-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-list/employee-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-list/employee-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-list/employee-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/components/employees/employee-list/employee-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/material.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/app/services/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/app/services/employee.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/student-list/student-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Component_Template/demo/student-information/src/app/student-list/student-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-detail/dictionary-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-detail/dictionary-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-detail/dictionary-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-detail/dictionary-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-page/dictionary-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-page/dictionary-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-page/dictionary-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary-page/dictionary-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Service_Router/bai_tap/app-dictionary/src/app/dictionary.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../quizz/web-thi-trac-nghiem" beforeDir="false" afterPath="$PROJECT_DIR$/../../../quizz/web-thi-trac-nghiem" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1xyrNMxfVDUSM2z8Li3kBVV6Kbq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ts.external.directory.path" value="D:\hoaleduc-a1020i1\module_5\Backend_Connect\thuc_hanh\app-blog\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2262fea5-5f05-4d9f-9ed4-2f0e84ca6e24" name="Default Changelist" comment="" />
+      <created>1631338127392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631338127392</updated>
+      <workItem from="1631338128618" duration="211000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

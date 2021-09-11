@@ -1,25 +1,26 @@
-<h2>Simple Blog</h2>
-
+<h2>Simple blog</h2>
 <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
   <div>
-    <label>
+    <p>
       Title
       <br>
-      <input type="text" formControlName="title">
-    </label>
+      <label>
+        <input type="text" formGroupName="title">
+      </label>
+    </p>
   </div>
   <div *ngIf="postForm.get('title').invalid && postForm.get('title').touched" style="color: red">
     Title is required and min length is 10
   </div>
   <div>
     <label>
-      body
+      Body
       <br>
-      <textarea formControlName="body" cols="30" rows="10"></textarea>
+      <textarea formGroupName="body" cols="30" rows="10"></textarea>
     </label>
   </div>
-  <div *ngIf="postForm.get('body').invalid && postForm.get('body').touched" style="color: red">
-    Body is required and min length is 10
+  <div *ngIf="postForm.get('body').invalid && postForm.get('body')?.touched" style="color:red">
+    Body is required and min length 10
   </div>
   <button type="submit">Submit</button>
 </form>
@@ -28,11 +29,10 @@
   <li *ngFor="let post of postList; index as i">
     <h3>
       <a [routerLink]="['/blog', post.id]">
-        Post Id: {{post.id}} - {{post.title}}
+        Post Id : {{post.id}} - {{post.title}}
       </a>
     </h3>
-    <a [routerLink]="['/blog', post.id, 'edit']">Edit</a>
-
+    <a [routerLink]="['/blog',post.id, 'edit']">Edit</a>
     <button (click)="deletePost(i)">Delete</button>
   </li>
 </ul>

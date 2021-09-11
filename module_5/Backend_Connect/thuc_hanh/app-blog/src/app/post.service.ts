@@ -28,4 +28,8 @@ export class PostService {
   updatePost(post: IPost): Observable<IPost> {
     return this.http.patch<IPost>(`${this.API_URL}/${post.id}`, post);
   }
+
+  getByPostId(id: number): Observable<IPost> {
+    return this.http.get<IPost>(`${this.API_URL}/${id}`);
+  }
 }

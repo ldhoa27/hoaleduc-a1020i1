@@ -11,41 +11,33 @@ import {PostService} from "../post.service";
 })
 export class BlogEditComponent implements OnInit {
 
-  post: IPost | undefined;
-  postForm: FormGroup | undefined;
-  constructor(
-    private route: ActivatedRoute,
-    private postService: PostService,
-    private fb: FormBuilder,
-    private router: Router
-  ) {}
+  post! : IPost;
+  postForm!: FormGroup;
+  constructor(private route: ActivatedRoute,
+              private postService: PostService,
+              private fb: FormBuilder,
+              private router : Router) { }
 
-  ngOnInit() {
+  ngOnInit(){
     this.postForm = this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(10)]],
-      body: ['', [Validators.required, Validators.minLength(10)]]
+      title: ['',[Validators.required],[Validators.minLength(10)]],
+      body: ['',[Validators.required],[Validators.minLength(10)]],
     });
     // @ts-ignore
     const id = +this.route.snapshot.paramMap.get('id');
-    this.postService.getPostById(id).subscribe(
+    this.postService.getByPostId(id).subscribe(
       next => {
         this.post = next;
-        // @ts-ignore
         this.postForm.patchValue(this.post);
       },
-      error => {
+      error =>{
         console.log(error);
-        // @ts-ignore
-        this.post = null;
       }
     );
   }
-
-  onSubmit() {
-    // @ts-ignore
-    if (this.postForm.valid) {
-      // @ts-ignore
-      const { value } = this.postForm;
+  onSubmit(){
+    if (this.postForm.valid){
+      const {value} = this.postForm;
       const data = {
         ...this.post,
         ...value
@@ -56,6 +48,7 @@ export class BlogEditComponent implements OnInit {
         },
         error => console.log(error)
       );
+
     }
   }
 
