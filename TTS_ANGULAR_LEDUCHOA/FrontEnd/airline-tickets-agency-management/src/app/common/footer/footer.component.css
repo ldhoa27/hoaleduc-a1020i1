@@ -1,0 +1,49 @@
+
+/*#region FOOTER*/
+.footer {
+  width: 100%;
+  padding: 20px 6%;
+  color: #f7f7f7;
+  font-weight: bold;
+  position: relative;
+  bottom: 0;
+  background-color: #0b41ff;
+  text-align: center;
+}
+
+.footer .column:first-child img {
+  width: 26px;
+  height: 26px;
+}
+
+.footer .column:nth-child(3) img {
+  width: 101px;
+  height: 31px;
+
+}
+
+.footer .column:nth-child(3) img:first-child {
+  width: 43px;
+  height: 38px;
+
+}
+
+.footer .column:nth-child(4) img {
+  width: 112px;
+  height: 43px;
+
+}
+.footer-icon a {
+  padding: 0 5px;
+  text-align: justify;
+}
+/*#endregion*/
+/*#region HOME - CHAT - TOP*/
+.home-chat-top {
+  font-size: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+/*#endregion*/
